@@ -57,6 +57,7 @@ public class Service {
         while (count <= i){
             i++;
             System.out.println("Deseja cadastrar quantas pessoas? ");
+            System.out.println("Deseja cadastrar quantas pessoas? ");
             i = scanner.nextInt();
         }
     }
