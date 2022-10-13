@@ -2,8 +2,10 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Service {
+    Scanner scanner = new Scanner(System.in);
     List<People> pessoas = new ArrayList<>();
     List<People> homens = new ArrayList<>();
     List<People> feminino = new ArrayList<>();
@@ -48,5 +50,14 @@ public class Service {
         System.out.println("Lista dos homens: " + masculino);
         System.out.println("Lista das mulheres: " + feminino);
         return homens;
+    }
+    public void chamar(){
+        int count =0;
+        int i =0;
+        while (count <= i){
+            i++;
+            System.out.println("Deseja cadastrar quantas pessoas? ");
+            i = scanner.nextInt();
+        }
     }
 }

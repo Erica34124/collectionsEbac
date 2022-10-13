@@ -8,6 +8,7 @@ public class Main {
         service.classificar("Rafael", "masculino");
         service.classificar("vanessa", "feminino");
         service.classificar("Marcio", "masculino");
+        service.chamar();
 
     }
 }
