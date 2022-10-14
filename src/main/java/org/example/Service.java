@@ -20,7 +20,7 @@ public class Service {
 
     public List<People> cadastrar(String nome, String sexo) {
 
-        pessoas.add(popular(nome, sexo));
+        this.pessoas.add(popular(nome, sexo));
         for (People i : pessoas) {
             if (!pessoas.contains(i)) {
                 pessoas.add(i);
@@ -51,14 +51,21 @@ public class Service {
         System.out.println("Lista das mulheres: " + feminino);
         return homens;
     }
-    public void chamar(){
-        int count =0;
-        int i =0;
-        while (count <= i){
-            i++;
-            System.out.println("Deseja cadastrar quantas pessoas? ");
-            System.out.println("Deseja cadastrar quantas pessoas? ");
-            i = scanner.nextInt();
+
+    public void chamar() {
+        int count = 0;
+        int i = 0;
+        System.out.println("Deseja cadastrar quantas pessoas? ");
+        i = scanner.nextInt();
+        while (count < i) {
+            count++;
+            System.out.println("Entre com nome: ");
+            String nome = scanner.nextLine();
+            System.out.println("Entre com sexo: ");
+            String sexo = scanner.nextLine();
+            this.classificar(nome, sexo);
+            System.out.println("Rodando " + count + " vezes.");
         }
+        System.out.println(this.pessoas);
     }
 }
